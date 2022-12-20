@@ -111,7 +111,7 @@ func main() {
 		wg.Wait()
 
 	}
-	fmt.Println(len(result))
+	// пишем все спаршенные объекты в memcahed
 	for _, item := range result {
 		if err := SetCache(item); err != nil {
 			fmt.Println(err)
